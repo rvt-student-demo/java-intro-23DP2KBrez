@@ -5,22 +5,13 @@ import java.util.Scanner;
 public class App 
 {
     public static void main( String[] args )
-    {   
-        Scanner scanner = new Scanner(System.in);
-        String name;
-        String surname;
-        String group;
-        
-        System.out.println("Enter your name:");
-        name = scanner.nextLine();
-        System.out.println("Enter your surname:");
-        surname = scanner.nextLine();
-        System.out.println("Enter your group:");
-        group = scanner.nextLine();
-
-        System.out.println("You aswers:");
-        System.out.println(name+" "+surname+" "+group);
-
-        scanner.close();
-    } 
+    {
+        int chicken = 3;   
+        double bacon = 5.5;
+        String tractor = "None!";
+        System.out.println("And finally, a summary:");
+        System.out.println(chicken);
+        System.out.println(bacon);
+        System.out.println(tractor);
+    }
 }

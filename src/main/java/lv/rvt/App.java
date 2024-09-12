@@ -37,6 +37,9 @@ public class App
         float first = inputManager.getFloat();
         float second = inputManager.getFloat();
     
-        System.out.println(first + second);
+        System.out.println(first + " + " + second + " = " + (first + second));
+        System.out.println(first + " - " + second + " = " + (first - second));
+        System.out.println(first + " * " + second + " = " + (first * second));
+        System.out.println(first + " / " + second + " = " + (first / second));
     }
 }

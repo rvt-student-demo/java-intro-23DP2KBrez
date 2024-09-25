@@ -35,39 +35,32 @@ public class App
         scanner = new Scanner(System.in);
         inputManager = new InputManager(scanner);
 
-        System.out.println("Give points[0-100]:");
-        float points = inputManager.getFloat();
-        if(points < 0)
+        System.out.println("Value of the gift?");
+        int value = inputManager.getInt();
+        if (value < 5000)
         {
-            System.out.println("Impossible");
+            System.out.println("No tax!");
         }
-        else if (points < 49 && points > 0)
+        else if (value >= 5000 && value < 25000)
         {
-            System.out.println("failed");
+            System.out.println("Tax: " + (100 + (value-5000)*0.08));
         }
-        else if (points > 49 && points < 60)
+        else if (value >= 25000 && value < 55000)
         {
-            System.out.println("1");
+            System.out.println("Tax: " + (1700 + (value-25000)*0.1));
         }
-        else if (points >= 60 && points <= 70)
+        else if (value >= 55000 && value < 200000)
         {
-            System.out.println("2");
+            System.out.println("Tax: " + (4700 + (value-55000 )*0.12));
         }
-        else if (points >= 70 && points <= 80)
+        else if (value >= 200000 && value < 1000000)
         {
-            System.out.println("3");
+            System.out.println("Tax: " + (22100 + (value-200000)*0.15));
         }
-        else if (points >= 80 && points <= 90)
+        else if (value >= 1000000)
         {
-            System.out.println("4");
+            System.out.println("Tax: " + (142100 + (value-1000000)*0.17));
         }
-        else if (points >= 90 && points <= 100)
-        {
-            System.out.println("5");
-        }
-        else if (points > 100)
-        {
-            System.out.println("Incredible!");
-        }
+        scanner.close();
     }
 }

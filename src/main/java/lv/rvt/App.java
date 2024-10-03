@@ -1,6 +1,8 @@
 package lv.rvt;
 import java.util.*;
 
+
+
 class InputManager
 {
     Scanner scanner;
@@ -30,30 +32,24 @@ public class App
 {
     static InputManager inputManager;
     static Scanner scanner;
+
+    static void divisibleByThreeInRange(int a, int b)
+    {
+        for(int i = a; b + 1 > i; i++)
+        {
+            if(i % 3 == 0)
+            {
+                System.out.println(i);
+            }
+        }
+    }
+
     public static void main( String[] args )
     {
         scanner = new Scanner(System.in);
         inputManager = new InputManager(scanner);
+        divisibleByThreeInRange(3, 9);
 
-        int count = 0;
-        int sum = 0;
-        while (true) 
-        {
-            System.out.println("Give a number: ");
-            int number = inputManager.getInt();
-            
-            if (number == 0) 
-            {
-                System.out.println("Number of numbers: " + count);
-                System.out.println("Sum of the numbers: "+ sum);
-                break;
-            }
-            else
-            {
-                sum += number;
-                count++;
-            }
-        }
         scanner.close();
     }
 }

@@ -1,8 +1,6 @@
 package lv.rvt;
 import java.util.*;
 
-
-
 class InputManager
 {
     Scanner scanner;
@@ -28,27 +26,19 @@ class InputManager
     }
 }
 
+
 public class App 
 {
     static InputManager inputManager;
     static Scanner scanner;
-
-    static boolean g()
-    {
-        return true;
-    }
 
     public static void main( String[] args )
     {
         scanner = new Scanner(System.in);
         inputManager = new InputManager(scanner);
 
-        int a = inputManager.getInt();
-
-        for(int i = a; i < 101; i++)
-        {
-            System.out.println(i);
-        }
-        scanner.close();
+        Stars.printSquare(3);
+        Stars.printRectangle(17, 3);
+        Stars.printTriangle(4);
     }
 }

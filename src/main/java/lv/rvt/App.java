@@ -35,23 +35,37 @@ public class App
     public static void main( String[] args )
     {
         scanner = new Scanner(System.in);
-
         inputManager = new InputManager(scanner);
-        
-        int number = inputManager.getInt();
 
-        if(number == 0)
+        float number = 0;
+        float sum = 0;
+        int count = 0;
+        int odd = 0;
+        int even = 0;
+        while(true)
         {
-            System.out.println(1);
-            return;
-        }
+            number = inputManager.getFloat();
+            sum += number;
+            if(number < 0)
+            {
+                break;
+            }
+            if(number % 2 == 0)
+            {
+                even++;
+            }
+            else
+            {
+                odd++;
+            }
 
-        int answer = 1;
-        for(int i = 1; i < number + 1; i++)
-        {
-            answer *= i;
+            count++;
         }
-        System.out.println(answer);
-
+        System.out.println("Thx! Bye!");
+        System.out.println("Sum: " + sum);
+        System.out.println("Numbers: " + count);
+        System.out.println("Average: " + (sum/count));
+        System.out.println("Even: " + even);
+        System.out.println("Odd: " + odd);
     }
 }

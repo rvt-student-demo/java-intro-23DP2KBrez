@@ -33,23 +33,22 @@ public class App
     static InputManager inputManager;
     static Scanner scanner;
 
-    static void divisibleByThreeInRange(int a, int b)
+    static boolean g()
     {
-        for(int i = a; b + 1 > i; i++)
-        {
-            if(i % 3 == 0)
-            {
-                System.out.println(i);
-            }
-        }
+        return true;
     }
 
     public static void main( String[] args )
     {
         scanner = new Scanner(System.in);
         inputManager = new InputManager(scanner);
-        divisibleByThreeInRange(3, 9);
 
+        int a = inputManager.getInt();
+
+        for(int i = a; i < 101; i++)
+        {
+            System.out.println(i);
+        }
         scanner.close();
     }
 }

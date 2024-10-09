@@ -35,10 +35,23 @@ public class App
     public static void main( String[] args )
     {
         scanner = new Scanner(System.in);
-        inputManager = new InputManager(scanner);
 
-        Stars.printSquare(3);
-        Stars.printRectangle(17, 3);
-        Stars.printTriangle(4);
+        inputManager = new InputManager(scanner);
+        
+        int number = inputManager.getInt();
+
+        if(number == 0)
+        {
+            System.out.println(1);
+            return;
+        }
+
+        int answer = 1;
+        for(int i = 1; i < number + 1; i++)
+        {
+            answer *= i;
+        }
+        System.out.println(answer);
+
     }
 }

@@ -32,16 +32,21 @@ public class App
     static InputManager inputManager;
     static Scanner scanner;
 
+    public static void printText() 
+    {
+        System.out.println("In a hole in the ground there lived a method");
+    }
     public static void main( String[] args )
     {
         scanner = new Scanner(System.in);
         inputManager = new InputManager(scanner);
 
-        Stars.printSquare(3);
-        Stars.printRectangle(17, 3);
-        Stars.printTriangle(4);
-        Stars.printRightTriangle(4);
-        Stars.christmasTree(4);
-        Stars.christmasTree(10);
+        System.out.println("How many times?");
+        int number = inputManager.getInt();
+
+        for(int i = 0; i < number; i++)
+        {
+            printText();
+        }
     }
 }
